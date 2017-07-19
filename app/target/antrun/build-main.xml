@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <taskdef resource="net/sf/antcontrib/antlib.xml"/>
+  <property file="C:\workspace\roller-project\app/src/main/resources/sql/dbscripts.properties"/>
+  <for param="database" delimiter=" " list="${databases}">
+    <sequential>
+      <mkdir dir="C:\workspace\roller-project\app/target/dbscripts/@{database}"/>
+    </sequential>
+  </for>
+  <taskdef classname="org.apache.velocity.texen.ant.TexenTask" name="texen" classpathref="maven.compile.classpath"/>
+  <texen outputFile="README.txt" controlTemplate="control.vm" outputDirectory="C:\workspace\roller-project\app/target/dbscripts" contextProperties="C:\workspace\roller-project\app/src/main/resources/sql/dbscripts.properties" templatePath="C:\workspace\roller-project\app/src/main/resources/sql"/>
+</target>
+</project>

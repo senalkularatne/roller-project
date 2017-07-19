@@ -1,0 +1,470 @@
+INFO  2017-01-05 14:25:51,200 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 14:25:51,202 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2017-01-05 14:25:51,202 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb;create=true
+INFO  2017-01-05 14:25:51,202 DatabaseProvider:successMessage - -- Using JDBC username: app
+INFO  2017-01-05 14:25:51,202 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 14:25:51,206 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+WARN  2017-01-05 14:25:51,265 WebloggerStartup:prepare - Failed to setup mail provider, continuing anyways.
+Reason: ERROR connecting to mail server
+INFO  2017-01-05 14:25:51,266 WebloggerStartup:prepare - The cause of setting up mail provider error was: 
+org.apache.roller.weblogger.business.startup.StartupException: ERROR connecting to mail server
+	at org.apache.roller.weblogger.business.MailProvider.<init>(MailProvider.java:99)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:177)
+	at org.apache.roller.weblogger.ui.core.RollerContext.contextInitialized(RollerContext.java:142)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:798)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:789)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1345)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1338)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:501)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+--- ROOT CAUSE ---
+javax.mail.NoSuchProviderException: Invalid protocol: null
+	at javax.mail.Session.getProvider(Session.java:449)
+	at javax.mail.Session.getTransport(Session.java:667)
+	at javax.mail.Session.getTransport(Session.java:648)
+	at javax.mail.Session.getTransport(Session.java:634)
+	at org.apache.roller.weblogger.business.MailProvider.getTransport(MailProvider.java:132)
+	at org.apache.roller.weblogger.business.MailProvider.<init>(MailProvider.java:96)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:177)
+	at org.apache.roller.weblogger.ui.core.RollerContext.contextInitialized(RollerContext.java:142)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:798)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:789)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1345)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1338)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:501)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+INFO  2017-01-05 14:25:51,709 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2017-01-05 14:25:51,710 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb;create=true
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - -- Using JDBC username: app
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 14:25:51,717 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+INFO  2017-01-05 14:25:51,720 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2017-01-05 14:25:51,721 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2017-01-05 14:25:51,721 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JDBCTransactionFactory
+INFO  2017-01-05 14:25:51,721 JPAPersistenceStrategy:<init> - hibernate.dialect: org.hibernate.dialect.DerbyDialect
+INFO  2017-01-05 14:25:52,740 IndexManagerImpl:<init> - search enabled: true
+INFO  2017-01-05 14:25:52,740 IndexManagerImpl:<init> - index dir: C:\workspace\roller-project\app\target\work\search-index
+INFO  2017-01-05 14:25:52,768 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2017-01-05 14:25:52,770 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2017-01-05 14:25:52,770 WebloggerFactory:bootstrap -    Version: 5.2.0-SNAPSHOT
+INFO  2017-01-05 14:25:52,770 WebloggerFactory:bootstrap -    Revision: rUNKNOWN
+INFO  2017-01-05 14:25:52,770 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2017-01-05 14:25:53,261 JPAPropertiesManagerImpl:initializeMissingProps - Property site.name not yet in roller_properties database table, will store with default value of [Roller Site`]
+INFO  2017-01-05 14:25:53,261 JPAPropertiesManagerImpl:initializeMissingProps - Property site.shortName not yet in roller_properties database table, will store with default value of [Front Page`]
+INFO  2017-01-05 14:25:53,261 JPAPropertiesManagerImpl:initializeMissingProps - Property site.description not yet in roller_properties database table, will store with default value of [A default install of the Roller Weblogger open source blog server`]
+INFO  2017-01-05 14:25:53,261 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.handle not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,261 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.aggregated not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property site.adminemail not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property site.absoluteurl not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property pings.suspendPingProcessing not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property user.account.email.activation not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.url not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,262 JPAPropertiesManagerImpl:initializeMissingProps - Property site.allowUserWeblogCreation not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property users.editor.pages not yet in roller_properties database table, will store with default value of [editor-text.jsp,editor-xinha.jsp`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableXmlRpc not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableAtomPub not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.atomPubAuth not yet in roller_properties database table, will store with default value of [basic`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property site.pages.maxEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.defaultEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 14:25:53,263 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.styledFeeds not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property comments.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property users.trackbacks.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property trackbacks.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.htmlenabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.plugins not yet in roller_properties database table, will store with default value of [HTMLSubset`]
+INFO  2017-01-05 14:25:53,264 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.emailnotify not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property users.moderation.required not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property site.trackbackVerification.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.allowed not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.forbid not yet in roller_properties database table, will store with default value of [exe`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.file.maxsize not yet in roller_properties database table, will store with default value of [2.00`]
+INFO  2017-01-05 14:25:53,265 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.dir.maxsize not yet in roller_properties database table, will store with default value of [20.00`]
+INFO  2017-01-05 14:25:53,266 JPAPropertiesManagerImpl:initializeMissingProps - Property users.themes.path not yet in roller_properties database table, will store with default value of [/themes`]
+INFO  2017-01-05 14:25:53,266 JPAPropertiesManagerImpl:initializeMissingProps - Property themes.customtheme.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,266 JPAPropertiesManagerImpl:initializeMissingProps - Property spam.blacklist not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,266 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.default.tracking.code not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:25:53,266 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.code.override.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:25:53,269 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from C:\workspace\roller-project\app\..\app\src\main\webapp\themes...
+INFO  2017-01-05 14:25:53,277 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2017-01-05 14:25:53,281 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2017-01-05 14:25:53,288 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2017-01-05 14:25:53,294 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2017-01-05 14:25:53,300 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2017-01-05 14:25:53,300 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2017-01-05 14:25:53,301 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2017-01-05 14:25:53,313 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2017-01-05 14:25:53,315 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2017-01-05 14:25:53,317 ThreadManagerImpl:initialize - Initializing task: TestTask
+INFO  2017-01-05 14:25:53,590 IndexManagerImpl:initialize - Index was inconsistent. Rebuilding index in the background...
+INFO  2017-01-05 14:25:53,604 PingConfig:initializeCommonTargets - Creating common ping target 'Technorati' from configuration properties.
+INFO  2017-01-05 14:25:53,604 PingConfig:initializeCommonTargets - Creating common ping target 'Weblogs.com' from configuration properties.
+INFO  2017-01-05 14:25:53,605 PingConfig:initializeCommonTargets - Creating common ping target 'blo.gs' from configuration properties.
+INFO  2017-01-05 14:25:53,605 PingConfig:initializeCommonTargets - Creating common ping target 'IceRocket' from configuration properties.
+INFO  2017-01-05 14:25:53,643 RebuildWebsiteIndexOperation:doRun - Completed rebuilding index for all users in '0.043' secs
+INFO  2017-01-05 14:25:53,656 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2017-01-05 14:25:53,656 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 14:25:53,656 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 14:25:54,341 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 14:25:54,342 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 14:25:54,404 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 14:25:54,404 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=false}
+WARN  2017-01-05 14:25:54,404 WeblogFeedCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:25:54,405 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=false, timeout=1800}
+WARN  2017-01-05 14:25:54,405 SiteWideCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:25:54,406 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 14:25:54,407 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 14:25:54,408 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=false, timeout=3600}
+WARN  2017-01-05 14:25:54,408 WeblogPageCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:25:54,408 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 14:25:54,409 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 14:25:54,410 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 14:25:54,412 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 14:25:54,417 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 14:25:54,418 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 14:25:54,418 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 14:25:54,418 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 14:25:54,418 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 14:25:54,420 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 14:25:54,421 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=false}
+WARN  2017-01-05 14:25:54,421 PlanetCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:25:54,421 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 14:25:54,422 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 14:25:54,423 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 14:25:54,423 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 14:25:54,423 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 14:25:54,424 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 14:25:54,425 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 14:28:35,412 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 14:28:35,413 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2017-01-05 14:28:35,413 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb;create=true
+INFO  2017-01-05 14:28:35,414 DatabaseProvider:successMessage - -- Using JDBC username: app
+INFO  2017-01-05 14:28:35,414 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 14:28:35,417 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+WARN  2017-01-05 14:28:35,466 WebloggerStartup:prepare - Failed to setup mail provider, continuing anyways.
+Reason: ERROR connecting to mail server
+INFO  2017-01-05 14:28:35,467 WebloggerStartup:prepare - The cause of setting up mail provider error was: 
+org.apache.roller.weblogger.business.startup.StartupException: ERROR connecting to mail server
+	at org.apache.roller.weblogger.business.MailProvider.<init>(MailProvider.java:99)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:177)
+	at org.apache.roller.weblogger.ui.core.RollerContext.contextInitialized(RollerContext.java:142)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:798)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:789)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1345)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1338)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:501)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+--- ROOT CAUSE ---
+javax.mail.NoSuchProviderException: Invalid protocol: null
+	at javax.mail.Session.getProvider(Session.java:449)
+	at javax.mail.Session.getTransport(Session.java:667)
+	at javax.mail.Session.getTransport(Session.java:648)
+	at javax.mail.Session.getTransport(Session.java:634)
+	at org.apache.roller.weblogger.business.MailProvider.getTransport(MailProvider.java:132)
+	at org.apache.roller.weblogger.business.MailProvider.<init>(MailProvider.java:96)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.prepare(WebloggerStartup.java:177)
+	at org.apache.roller.weblogger.ui.core.RollerContext.contextInitialized(RollerContext.java:142)
+	at org.eclipse.jetty.server.handler.ContextHandler.callContextInitialized(ContextHandler.java:798)
+	at org.eclipse.jetty.servlet.ServletContextHandler.callContextInitialized(ServletContextHandler.java:444)
+	at org.eclipse.jetty.server.handler.ContextHandler.startContext(ContextHandler.java:789)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:294)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1345)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1338)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:501)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+INFO  2017-01-05 14:28:35,888 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2017-01-05 14:28:35,889 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2017-01-05 14:28:35,895 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 14:28:35,895 DatabaseProvider:successMessage - -- Using JDBC driver class: org.apache.derby.jdbc.ClientDriver
+INFO  2017-01-05 14:28:35,896 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:derby://localhost:4224/memory:rollerdb;create=true
+INFO  2017-01-05 14:28:35,896 DatabaseProvider:successMessage - -- Using JDBC username: app
+INFO  2017-01-05 14:28:35,896 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 14:28:35,896 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [org.apache.derby.jdbc.ClientDriver]
+INFO  2017-01-05 14:28:35,899 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2017-01-05 14:28:35,899 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2017-01-05 14:28:35,900 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JDBCTransactionFactory
+INFO  2017-01-05 14:28:35,900 JPAPersistenceStrategy:<init> - hibernate.dialect: org.hibernate.dialect.DerbyDialect
+INFO  2017-01-05 14:28:36,840 IndexManagerImpl:<init> - search enabled: true
+INFO  2017-01-05 14:28:36,840 IndexManagerImpl:<init> - index dir: C:\workspace\roller-project\app\target\work\search-index
+INFO  2017-01-05 14:28:36,848 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2017-01-05 14:28:36,850 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2017-01-05 14:28:36,850 WebloggerFactory:bootstrap -    Version: 5.2.0-SNAPSHOT
+INFO  2017-01-05 14:28:36,850 WebloggerFactory:bootstrap -    Revision: rUNKNOWN
+INFO  2017-01-05 14:28:36,850 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2017-01-05 14:28:37,337 JPAPropertiesManagerImpl:initializeMissingProps - Property site.name not yet in roller_properties database table, will store with default value of [Roller Site`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.shortName not yet in roller_properties database table, will store with default value of [Front Page`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.description not yet in roller_properties database table, will store with default value of [A default install of the Roller Weblogger open source blog server`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.handle not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.aggregated not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.adminemail not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property site.absoluteurl not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property pings.suspendPingProcessing not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,338 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property user.account.email.activation not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.url not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property site.allowUserWeblogCreation not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property users.editor.pages not yet in roller_properties database table, will store with default value of [editor-text.jsp,editor-xinha.jsp`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableXmlRpc not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableAtomPub not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,339 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.atomPubAuth not yet in roller_properties database table, will store with default value of [basic`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property site.pages.maxEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.defaultEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.styledFeeds not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property comments.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property users.trackbacks.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property trackbacks.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,340 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.htmlenabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.plugins not yet in roller_properties database table, will store with default value of [HTMLSubset`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.emailnotify not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property users.moderation.required not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property site.trackbackVerification.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.allowed not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,341 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.forbid not yet in roller_properties database table, will store with default value of [exe`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.file.maxsize not yet in roller_properties database table, will store with default value of [2.00`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.dir.maxsize not yet in roller_properties database table, will store with default value of [20.00`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property users.themes.path not yet in roller_properties database table, will store with default value of [/themes`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property themes.customtheme.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property spam.blacklist not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.default.tracking.code not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 14:28:37,342 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.code.override.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 14:28:37,345 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from C:\workspace\roller-project\app\..\app\src\main\webapp\themes...
+INFO  2017-01-05 14:28:37,352 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2017-01-05 14:28:37,356 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2017-01-05 14:28:37,364 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2017-01-05 14:28:37,369 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2017-01-05 14:28:37,376 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2017-01-05 14:28:37,376 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2017-01-05 14:28:37,376 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2017-01-05 14:28:37,387 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2017-01-05 14:28:37,388 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2017-01-05 14:28:37,390 ThreadManagerImpl:initialize - Initializing task: TestTask
+INFO  2017-01-05 14:28:37,413 IndexManagerImpl:initialize - Index initialized and ready for use.
+INFO  2017-01-05 14:28:37,417 PingConfig:initializeCommonTargets - Creating common ping target 'Technorati' from configuration properties.
+INFO  2017-01-05 14:28:37,417 PingConfig:initializeCommonTargets - Creating common ping target 'Weblogs.com' from configuration properties.
+INFO  2017-01-05 14:28:37,417 PingConfig:initializeCommonTargets - Creating common ping target 'blo.gs' from configuration properties.
+INFO  2017-01-05 14:28:37,418 PingConfig:initializeCommonTargets - Creating common ping target 'IceRocket' from configuration properties.
+INFO  2017-01-05 14:28:37,457 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2017-01-05 14:28:37,458 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 14:28:37,458 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 14:28:38,006 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 14:28:38,007 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 14:28:38,048 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 14:28:38,048 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=false}
+WARN  2017-01-05 14:28:38,049 WeblogFeedCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:28:38,049 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=false, timeout=1800}
+WARN  2017-01-05 14:28:38,049 SiteWideCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:28:38,050 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 14:28:38,052 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 14:28:38,052 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=false, timeout=3600}
+WARN  2017-01-05 14:28:38,052 WeblogPageCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:28:38,052 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 14:28:38,053 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 14:28:38,054 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 14:28:38,056 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 14:28:38,061 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 14:28:38,061 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 14:28:38,062 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 14:28:38,062 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 14:28:38,062 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 14:28:38,063 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 14:28:38,064 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=false}
+WARN  2017-01-05 14:28:38,064 PlanetCache:<init> - Caching has been DISABLED
+INFO  2017-01-05 14:28:38,064 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 14:28:38,065 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 14:28:38,065 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 14:28:38,066 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 14:28:38,066 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 14:28:38,067 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 14:28:38,067 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 14:28:58,124 SaltCache:<init> - {size=5000, id=cache.salt, enabled=true, timeout=3600}
+INFO  2017-01-05 14:28:58,126 CacheManager:<clinit> - Cache Manager Initialized.
+INFO  2017-01-05 14:28:58,126 CacheManager:<clinit> - Cache Factory = org.apache.roller.weblogger.util.cache.ExpiringLRUCacheFactoryImpl

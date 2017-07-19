@@ -1,0 +1,555 @@
+INFO  2017-01-05 22:12:28,018 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:12:28,020 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:12:28,020 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:12:28,020 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:12:28,020 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:12:28,023 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:12:29,351 RollerContext:contextInitialized - 
+--------------------------------------------------------------
+Roller Weblogger startup INCOMPLETE, user interaction required
+--------------------------------------------------------------
+INFO  2017-01-05 22:12:29,351 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 22:12:29,355 RollerContext:initializeSecurityFeatures - Password Encryption Algorithm set to 'SHA'
+INFO  2017-01-05 22:12:29,355 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 22:12:29,738 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 22:12:30,320 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 22:12:30,322 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 22:12:30,323 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 22:12:30,323 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=true}
+INFO  2017-01-05 22:12:30,325 CacheManager:<clinit> - Cache Manager Initialized.
+INFO  2017-01-05 22:12:30,326 CacheManager:<clinit> - Cache Factory = org.apache.roller.weblogger.util.cache.ExpiringLRUCacheFactoryImpl
+INFO  2017-01-05 22:12:30,328 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=true, timeout=1800}
+INFO  2017-01-05 22:12:30,328 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:12:30,328 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 22:12:30,329 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=true, timeout=3600}
+INFO  2017-01-05 22:12:30,329 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 22:12:30,329 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:12:30,329 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 22:12:30,336 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:12:30,336 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:12:30,337 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:12:30,337 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:12:30,337 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 22:12:30,338 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 22:12:30,338 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=true}
+INFO  2017-01-05 22:12:30,338 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 22:12:30,338 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:12:30,339 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:12:30,339 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:12:30,339 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:12:30,340 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 22:12:30,340 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 22:12:31,086 SaltCache:<init> - {size=5000, id=cache.salt, enabled=true, timeout=3600}
+INFO  2017-01-05 22:12:36,609 DatabaseInstaller:createDatabase - Creating Roller Weblogger database tables.
+ERROR 2017-01-05 22:12:36,616 DatabaseInstaller:createDatabase - ERROR running database creation script
+java.lang.NullPointerException
+	at java.io.Reader.<init>(Unknown Source)
+	at java.io.InputStreamReader.<init>(Unknown Source)
+	at org.apache.roller.weblogger.business.startup.SQLScriptRunner.<init>(SQLScriptRunner.java:47)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.createDatabase(DatabaseInstaller.java:167)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.createDatabase(WebloggerStartup.java:106)
+	at org.apache.roller.weblogger.ui.struts2.core.Install.create(Install.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invokeAction(DefaultActionInvocation.java:450)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invokeActionOnly(DefaultActionInvocation.java:289)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:252)
+	at com.opensymphony.xwork2.interceptor.DefaultWorkflowInterceptor.doIntercept(DefaultWorkflowInterceptor.java:167)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.validator.ValidationInterceptor.doIntercept(ValidationInterceptor.java:265)
+	at org.apache.struts2.interceptor.validation.AnnotationValidationInterceptor.doIntercept(AnnotationValidationInterceptor.java:68)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UIActionPrepareInterceptor.doIntercept(UIActionPrepareInterceptor.java:54)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UISecurityInterceptor.doIntercept(UISecurityInterceptor.java:124)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UIActionInterceptor.doIntercept(UIActionInterceptor.java:88)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ConversionErrorInterceptor.intercept(ConversionErrorInterceptor.java:138)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:254)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:254)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.StaticParametersInterceptor.intercept(StaticParametersInterceptor.java:191)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.MultiselectInterceptor.intercept(MultiselectInterceptor.java:73)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.CheckboxInterceptor.intercept(CheckboxInterceptor.java:91)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.FileUploadInterceptor.intercept(FileUploadInterceptor.java:252)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ChainingInterceptor.intercept(ChainingInterceptor.java:145)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.I18nInterceptor.intercept(I18nInterceptor.java:139)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.ServletConfigInterceptor.intercept(ServletConfigInterceptor.java:164)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor.intercept(ExceptionMappingInterceptor.java:189)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.impl.StrutsActionProxy.execute(StrutsActionProxy.java:54)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:562)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:99)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.rendering.filters.RequestMappingFilter.doFilter(RequestMappingFilter.java:132)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.ValidateSaltFilter.doFilter(ValidateSaltFilter.java:74)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.LoadSaltFilter.doFilter(LoadSaltFilter.java:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.InitFilter.doFilter(InitFilter.java:73)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.PersistenceSessionFilter.doFilter(PersistenceSessionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.BootstrapFilter.doFilter(BootstrapFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:139)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:154)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.SchemeEnforcementFilter.doFilter(SchemeEnforcementFilter.java:132)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.CharEncodingFilter.doFilter(CharEncodingFilter.java:83)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:745)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2017-01-05 22:12:36,618 DatabaseInstaller:errorMessage - ERROR reading/parsing database creation script
+INFO  2017-01-05 22:14:57,525 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:14:57,527 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:14:57,528 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:14:57,528 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:14:57,528 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:14:57,531 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:14:57,820 RollerContext:contextInitialized - 
+--------------------------------------------------------------
+Roller Weblogger startup INCOMPLETE, user interaction required
+--------------------------------------------------------------
+INFO  2017-01-05 22:14:57,820 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 22:14:57,823 RollerContext:initializeSecurityFeatures - Password Encryption Algorithm set to 'SHA'
+INFO  2017-01-05 22:14:57,824 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 22:14:58,122 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 22:14:58,672 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 22:14:58,674 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 22:14:58,674 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 22:14:58,675 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=true}
+INFO  2017-01-05 22:14:58,677 CacheManager:<clinit> - Cache Manager Initialized.
+INFO  2017-01-05 22:14:58,677 CacheManager:<clinit> - Cache Factory = org.apache.roller.weblogger.util.cache.ExpiringLRUCacheFactoryImpl
+INFO  2017-01-05 22:14:58,679 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=true, timeout=1800}
+INFO  2017-01-05 22:14:58,679 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:14:58,680 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 22:14:58,680 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=true, timeout=3600}
+INFO  2017-01-05 22:14:58,680 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 22:14:58,680 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:14:58,681 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 22:14:58,686 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:14:58,687 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:14:58,687 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:14:58,688 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:14:58,688 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 22:14:58,688 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 22:14:58,688 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=true}
+INFO  2017-01-05 22:14:58,689 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 22:14:58,689 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:14:58,689 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:14:58,689 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:14:58,689 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:14:58,690 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 22:14:58,690 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 22:14:59,301 SaltCache:<init> - {size=5000, id=cache.salt, enabled=true, timeout=3600}
+INFO  2017-01-05 22:15:02,346 DatabaseInstaller:createDatabase - Creating Roller Weblogger database tables.
+ERROR 2017-01-05 22:15:24,495 DatabaseInstaller:createDatabase - ERROR running SQL in database creation script
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: REFERENCES command denied to user 'eece3093'@'localhost' for table 'weblog'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:943)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3970)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3906)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1540)
+	at com.mysql.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2595)
+	at com.mysql.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1468)
+	at org.apache.roller.weblogger.business.startup.SQLScriptRunner.runScript(SQLScriptRunner.java:120)
+	at org.apache.roller.weblogger.business.startup.DatabaseInstaller.createDatabase(DatabaseInstaller.java:168)
+	at org.apache.roller.weblogger.business.startup.WebloggerStartup.createDatabase(WebloggerStartup.java:106)
+	at org.apache.roller.weblogger.ui.struts2.core.Install.create(Install.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invokeAction(DefaultActionInvocation.java:450)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invokeActionOnly(DefaultActionInvocation.java:289)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:252)
+	at com.opensymphony.xwork2.interceptor.DefaultWorkflowInterceptor.doIntercept(DefaultWorkflowInterceptor.java:167)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.validator.ValidationInterceptor.doIntercept(ValidationInterceptor.java:265)
+	at org.apache.struts2.interceptor.validation.AnnotationValidationInterceptor.doIntercept(AnnotationValidationInterceptor.java:68)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UIActionPrepareInterceptor.doIntercept(UIActionPrepareInterceptor.java:54)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UISecurityInterceptor.doIntercept(UISecurityInterceptor.java:124)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.roller.weblogger.ui.struts2.util.UIActionInterceptor.doIntercept(UIActionInterceptor.java:88)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ConversionErrorInterceptor.intercept(ConversionErrorInterceptor.java:138)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:254)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ParametersInterceptor.doIntercept(ParametersInterceptor.java:254)
+	at com.opensymphony.xwork2.interceptor.MethodFilterInterceptor.intercept(MethodFilterInterceptor.java:98)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.StaticParametersInterceptor.intercept(StaticParametersInterceptor.java:191)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.MultiselectInterceptor.intercept(MultiselectInterceptor.java:73)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.CheckboxInterceptor.intercept(CheckboxInterceptor.java:91)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.FileUploadInterceptor.intercept(FileUploadInterceptor.java:252)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ChainingInterceptor.intercept(ChainingInterceptor.java:145)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.I18nInterceptor.intercept(I18nInterceptor.java:139)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.interceptor.ServletConfigInterceptor.intercept(ServletConfigInterceptor.java:164)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor.intercept(ExceptionMappingInterceptor.java:189)
+	at com.opensymphony.xwork2.DefaultActionInvocation.invoke(DefaultActionInvocation.java:246)
+	at org.apache.struts2.impl.StrutsActionProxy.execute(StrutsActionProxy.java:54)
+	at org.apache.struts2.dispatcher.Dispatcher.serviceAction(Dispatcher.java:562)
+	at org.apache.struts2.dispatcher.ng.ExecuteOperations.executeAction(ExecuteOperations.java:77)
+	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.doFilter(StrutsPrepareAndExecuteFilter.java:99)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.rendering.filters.RequestMappingFilter.doFilter(RequestMappingFilter.java:132)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.ValidateSaltFilter.doFilter(ValidateSaltFilter.java:74)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.LoadSaltFilter.doFilter(LoadSaltFilter.java:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.InitFilter.doFilter(InitFilter.java:73)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.PersistenceSessionFilter.doFilter(PersistenceSessionFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.BootstrapFilter.doFilter(BootstrapFilter.java:67)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:139)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:154)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:199)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:50)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.SchemeEnforcementFilter.doFilter(SchemeEnforcementFilter.java:132)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.roller.weblogger.ui.core.filters.CharEncodingFilter.doFilter(CharEncodingFilter.java:83)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:474)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:745)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+ERROR 2017-01-05 22:15:24,498 DatabaseInstaller:errorMessage - ERROR running SQL in database creation script
+INFO  2017-01-05 22:16:53,571 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:16:53,573 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:16:53,573 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:16:53,573 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:16:53,573 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:16:53,576 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:16:54,445 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2017-01-05 22:16:54,445 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:16:54,458 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:16:54,462 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2017-01-05 22:16:54,462 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2017-01-05 22:16:54,462 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JTATransactionFactory
+INFO  2017-01-05 22:16:55,802 IndexManagerImpl:<init> - search enabled: true
+INFO  2017-01-05 22:16:55,802 IndexManagerImpl:<init> - index dir: C:\workspace\roller-project\rollerdata\searchindex
+INFO  2017-01-05 22:16:55,812 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2017-01-05 22:16:55,815 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2017-01-05 22:16:55,815 WebloggerFactory:bootstrap -    Version: 5.2.0-SNAPSHOT
+INFO  2017-01-05 22:16:55,815 WebloggerFactory:bootstrap -    Revision: r${buildNumber}
+INFO  2017-01-05 22:16:55,815 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2017-01-05 22:16:56,435 JPAPropertiesManagerImpl:initializeMissingProps - Property site.name not yet in roller_properties database table, will store with default value of [Roller Site`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.shortName not yet in roller_properties database table, will store with default value of [Front Page`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.description not yet in roller_properties database table, will store with default value of [A default install of the Roller Weblogger open source blog server`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.handle not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.frontpage.weblog.aggregated not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.adminemail not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.absoluteurl not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property pings.suspendPingProcessing not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property user.account.email.activation not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property users.registration.url not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,436 JPAPropertiesManagerImpl:initializeMissingProps - Property site.allowUserWeblogCreation not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property users.editor.pages not yet in roller_properties database table, will store with default value of [editor-text.jsp,editor-xinha.jsp`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableXmlRpc not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.enableAtomPub not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property webservices.atomPubAuth not yet in roller_properties database table, will store with default value of [basic`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property site.pages.maxEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.defaultEntries not yet in roller_properties database table, will store with default value of [30`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property site.newsfeeds.styledFeeds not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property comments.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,437 JPAPropertiesManagerImpl:initializeMissingProps - Property users.trackbacks.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property trackbacks.ignoreSpam.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.htmlenabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.plugins not yet in roller_properties database table, will store with default value of [HTMLSubset`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property users.comments.emailnotify not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property users.moderation.required not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property site.trackbackVerification.enabled not yet in roller_properties database table, will store with default value of [false`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.enabled not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.allowed not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.types.forbid not yet in roller_properties database table, will store with default value of [exe`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.file.maxsize not yet in roller_properties database table, will store with default value of [2.00`]
+INFO  2017-01-05 22:16:56,438 JPAPropertiesManagerImpl:initializeMissingProps - Property uploads.dir.maxsize not yet in roller_properties database table, will store with default value of [20.00`]
+INFO  2017-01-05 22:16:56,439 JPAPropertiesManagerImpl:initializeMissingProps - Property users.themes.path not yet in roller_properties database table, will store with default value of [/themes`]
+INFO  2017-01-05 22:16:56,439 JPAPropertiesManagerImpl:initializeMissingProps - Property themes.customtheme.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,439 JPAPropertiesManagerImpl:initializeMissingProps - Property spam.blacklist not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,439 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.default.tracking.code not yet in roller_properties database table, will store with default value of [`]
+INFO  2017-01-05 22:16:56,439 JPAPropertiesManagerImpl:initializeMissingProps - Property analytics.code.override.allowed not yet in roller_properties database table, will store with default value of [true`]
+INFO  2017-01-05 22:16:56,476 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from C:\Users\wang2wt\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\roller-webapp\themes...
+INFO  2017-01-05 22:16:56,505 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2017-01-05 22:16:56,549 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2017-01-05 22:16:56,571 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2017-01-05 22:16:56,601 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2017-01-05 22:16:56,658 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2017-01-05 22:16:56,659 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2017-01-05 22:16:56,659 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2017-01-05 22:16:56,704 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2017-01-05 22:16:56,706 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2017-01-05 22:16:56,962 IndexManagerImpl:initialize - Index was inconsistent. Rebuilding index in the background...
+INFO  2017-01-05 22:16:56,966 PingConfig:initializeCommonTargets - Creating common ping target 'Technorati' from configuration properties.
+INFO  2017-01-05 22:16:56,967 PingConfig:initializeCommonTargets - Creating common ping target 'Weblogs.com' from configuration properties.
+INFO  2017-01-05 22:16:56,967 PingConfig:initializeCommonTargets - Creating common ping target 'blo.gs' from configuration properties.
+INFO  2017-01-05 22:16:56,967 PingConfig:initializeCommonTargets - Creating common ping target 'IceRocket' from configuration properties.
+INFO  2017-01-05 22:16:57,068 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2017-01-05 22:16:57,069 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 22:16:57,072 RollerContext:initializeSecurityFeatures - Password Encryption Algorithm set to 'SHA'
+INFO  2017-01-05 22:16:57,072 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 22:16:57,119 RebuildWebsiteIndexOperation:doRun - Completed rebuilding index for all users in '0.156' secs
+INFO  2017-01-05 22:16:57,371 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 22:16:57,923 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 22:16:57,924 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 22:16:57,925 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 22:16:57,925 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=true}
+INFO  2017-01-05 22:16:57,928 CacheManager:<clinit> - Cache Manager Initialized.
+INFO  2017-01-05 22:16:57,928 CacheManager:<clinit> - Cache Factory = org.apache.roller.weblogger.util.cache.ExpiringLRUCacheFactoryImpl
+INFO  2017-01-05 22:16:57,929 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=true, timeout=1800}
+INFO  2017-01-05 22:16:57,930 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:16:57,930 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 22:16:57,930 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=true, timeout=3600}
+INFO  2017-01-05 22:16:57,931 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 22:16:57,931 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:16:57,931 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 22:16:57,938 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:16:57,938 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:16:57,939 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:16:57,939 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:16:57,939 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 22:16:57,939 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 22:16:57,940 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=true}
+INFO  2017-01-05 22:16:57,940 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 22:16:57,940 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:16:57,940 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:16:57,940 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:16:57,941 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:16:57,941 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 22:16:57,942 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 22:16:58,588 SaltCache:<init> - {size=5000, id=cache.salt, enabled=true, timeout=3600}
+INFO  2017-01-05 22:17:44,650 ContinuousWorkerThread:run - HitCountQueueProcessor Started.
+INFO  2017-01-05 22:17:44,661 RendererManager:<clinit> - Renderer Manager Initialized.
+INFO  2017-01-05 22:17:44,662 RollerVelocity:<clinit> - Initializing Velocity Rendering Engine
+INFO  2017-01-05 22:17:53,460 HitCountQueue:shutdown - stopping worker HitCountQueueProcessor
+INFO  2017-01-05 22:17:53,460 ContinuousWorkerThread:run - HitCountQueueProcessor INTERRUPT: sleep interrupted
+INFO  2017-01-05 22:17:53,460 ContinuousWorkerThread:run - HitCountQueueProcessor Done.
+INFO  2017-01-05 22:18:06,927 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:18:06,929 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:18:06,929 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:18:06,929 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:18:06,929 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:18:06,932 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:18:07,676 WebloggerFactory:bootstrap - Bootstrapping Roller Weblogger business tier
+INFO  2017-01-05 22:18:07,676 WebloggerFactory:bootstrap - Weblogger Provider = org.apache.roller.weblogger.business.GuiceWebloggerProvider
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - SUCCESS: Got parameters. Using configuration type JDBC_PROPERTIES
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - -- Using JDBC driver class: com.mysql.jdbc.Driver
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - -- Using JDBC connection URL: jdbc:mysql://localhost:3306/rollerdb?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - -- Using JDBC username: eece3093
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - -- Using JDBC password: [hidden]
+INFO  2017-01-05 22:18:07,689 DatabaseProvider:successMessage - SUCCESS: loaded JDBC driver class [com.mysql.jdbc.Driver]
+INFO  2017-01-05 22:18:07,693 JPAPersistenceStrategy:<init> - hibernate.transaction.manager_lookup_class: org.hibernate.transaction.JBossTransactionManagerLookup
+INFO  2017-01-05 22:18:07,693 JPAPersistenceStrategy:<init> - eclipselink.persistence-context.flush-mode: auto
+INFO  2017-01-05 22:18:07,694 JPAPersistenceStrategy:<init> - hibernate.transaction.factory_class: org.hibernate.transaction.JTATransactionFactory
+INFO  2017-01-05 22:18:09,016 IndexManagerImpl:<init> - search enabled: true
+INFO  2017-01-05 22:18:09,016 IndexManagerImpl:<init> - index dir: C:\workspace\roller-project\rollerdata\searchindex
+INFO  2017-01-05 22:18:09,026 ThreadManagerImpl:<init> - Instantiating Thread Manager
+INFO  2017-01-05 22:18:09,030 WebloggerFactory:bootstrap - Roller Weblogger business tier successfully bootstrapped
+INFO  2017-01-05 22:18:09,030 WebloggerFactory:bootstrap -    Version: 5.2.0-SNAPSHOT
+INFO  2017-01-05 22:18:09,030 WebloggerFactory:bootstrap -    Revision: r${buildNumber}
+INFO  2017-01-05 22:18:09,030 WebloggerImpl:initialize - Initializing Roller Weblogger business tier
+INFO  2017-01-05 22:18:09,618 ThemeManagerImpl:loadAllThemesFromDisk - Loading themes from C:\Users\wang2wt\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\roller-webapp\themes...
+INFO  2017-01-05 22:18:09,626 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basic'
+INFO  2017-01-05 22:18:09,631 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'basicmobile'
+INFO  2017-01-05 22:18:09,638 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'fauxcoly'
+INFO  2017-01-05 22:18:09,643 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'frontpage'
+INFO  2017-01-05 22:18:09,650 ThemeManagerImpl:loadAllThemesFromDisk - Loaded theme 'gaurav'
+INFO  2017-01-05 22:18:09,650 ThemeManagerImpl:initialize - Successfully loaded 5 themes from disk.
+INFO  2017-01-05 22:18:09,650 ThreadManagerImpl:initialize - Initializing task: ScheduledEntriesTask
+INFO  2017-01-05 22:18:09,655 ThreadManagerImpl:initialize - Initializing task: ResetHitCountsTask
+INFO  2017-01-05 22:18:09,656 ThreadManagerImpl:initialize - Initializing task: PingQueueTask
+INFO  2017-01-05 22:18:09,676 IndexManagerImpl:initialize - Index initialized and ready for use.
+INFO  2017-01-05 22:18:09,683 WebloggerImpl:initialize - Roller Weblogger business tier successfully initialized
+INFO  2017-01-05 22:18:09,683 RollerContext:initializeSecurityFeatures - Remember Me enabled: true
+INFO  2017-01-05 22:18:09,686 RollerContext:initializeSecurityFeatures - Password Encryption Algorithm set to 'SHA'
+INFO  2017-01-05 22:18:09,686 RollerContext:setupVelocity - Initializing Velocity
+INFO  2017-01-05 22:18:09,997 RequestMappingFilter:init - Request mapping filter initialized, 1 mappers configured.
+INFO  2017-01-05 22:18:10,542 IPBanFilter:init - INIT IPBanFilter
+INFO  2017-01-05 22:18:10,544 SearchServlet:init - Initializing SearchServlet
+INFO  2017-01-05 22:18:10,544 FeedServlet:init - Initializing FeedServlet
+INFO  2017-01-05 22:18:10,545 WeblogFeedCache:<init> - {size=200, id=cache.weblogfeed, timeout=3600, enabled=true}
+INFO  2017-01-05 22:18:10,547 CacheManager:<clinit> - Cache Manager Initialized.
+INFO  2017-01-05 22:18:10,547 CacheManager:<clinit> - Cache Factory = org.apache.roller.weblogger.util.cache.ExpiringLRUCacheFactoryImpl
+INFO  2017-01-05 22:18:10,549 SiteWideCache:<init> - {size=50, id=cache.sitewide, enabled=true, timeout=1800}
+INFO  2017-01-05 22:18:10,549 ResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:18:10,550 PageServlet:init - Initializing PageServlet
+INFO  2017-01-05 22:18:10,550 WeblogPageCache:<init> - {size=400, id=cache.weblogpage, enabled=true, timeout=3600}
+INFO  2017-01-05 22:18:10,550 PageServlet:init - Referrer spam check enabled = false
+INFO  2017-01-05 22:18:10,550 MediaResourceServlet:init - Initializing ResourceServlet
+INFO  2017-01-05 22:18:10,551 CommentServlet:init - Initializing CommentServlet
+INFO  2017-01-05 22:18:10,557 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:18:10,558 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:18:10,558 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:18:10,558 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:18:10,558 CommentServlet:init - Comment Throttling DISABLED
+INFO  2017-01-05 22:18:10,559 PlanetFeedServlet:init - Initializing PlanetRssServlet
+INFO  2017-01-05 22:18:10,559 PlanetCache:<init> - Planet cache = {size=10, id=cache.planet, timeout=1800, enabled=true}
+INFO  2017-01-05 22:18:10,559 RSDServlet:init - Initializing RSDServlet
+INFO  2017-01-05 22:18:10,560 CommentValidationManager:<init> - Configured CommentValidator: Blacklist Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.BlacklistCommentValidator
+INFO  2017-01-05 22:18:10,560 CommentValidationManager:<init> - Configured CommentValidator: Excess Links Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessLinksCommentValidator
+INFO  2017-01-05 22:18:10,560 CommentValidationManager:<init> - Configured CommentValidator: Excess Size Comment Validator / org.apache.roller.weblogger.ui.rendering.plugins.comments.ExcessSizeCommentValidator
+INFO  2017-01-05 22:18:10,560 CommentValidationManager:<init> - Configured 3 CommentValidators
+INFO  2017-01-05 22:18:10,561 PreviewServlet:init - Initializing PreviewServlet
+INFO  2017-01-05 22:18:10,561 PreviewResourceServlet:init - Initializing PreviewResourceServlet
+INFO  2017-01-05 22:18:11,191 SaltCache:<init> - {size=5000, id=cache.salt, enabled=true, timeout=3600}
+INFO  2017-01-05 22:18:28,424 HitCountQueue:shutdown - stopping worker HitCountQueueProcessor
+INFO  2017-01-05 22:18:28,424 ContinuousWorkerThread:run - HitCountQueueProcessor Started.
+INFO  2017-01-05 22:18:28,424 ContinuousWorkerThread:run - HitCountQueueProcessor Done.

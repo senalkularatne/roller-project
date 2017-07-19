@@ -1,0 +1,6 @@
+org\apache\roller\weblogger\util\GenericThrottle$1.class
+org\apache\roller\weblogger\ui\struts2\editor\EntryEdit$1.class
+org\apache\roller\weblogger\pojos\MediaFileDirectoryComparator$1.class
+org\apache\roller\weblogger\ui\struts2\util\UIUtils$1.class
+org\apache\roller\weblogger\business\jpa\JPAMediaFileManagerImpl$1.class
+org\apache\roller\weblogger\pojos\MediaFileComparator$1.class
